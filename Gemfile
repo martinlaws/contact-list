@@ -10,7 +10,10 @@ gem 'sinatra-activerecord'
 gem 'puma'
 gem 'tux'
 gem "sinatra-cross_origin", "~> 0.3.1"
-gem 'pg'
+
+group :production do
+  gem 'pg'
+end
 
 group :development, :test do
   gem 'pry'
