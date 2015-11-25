@@ -1,11 +1,21 @@
 <h1>Home Page</h1>
-<form>
+
+<form id="create-contact-form">
   <input type="text" id="first_name" placeholder="First Name">
   <input type="text" id="last_name" placeholder="Last Name">
   <input type="text" id="email" placeholder="Email">
-  <input type="button" value="submit" id="create-contact">
+  <input type="button" value="Create Contact" id="create-contact">
 </form>
 
-<ul id="contact-index">
+<table id="contact-table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody id="contact">
 
-</ul>
+  </tbody>
+</table>

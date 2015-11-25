@@ -1,6 +1,18 @@
 $(function() {
-  $('#create-contact').on('click', function() {
-    console.log('WORKS!')
+  $.getJSON("/contacts", function(contacts){
+    $(contacts).each(function(i, contact){
+      $('#contact').append(
+        `<tr>
+          <td>${contact.first_name}</td>
+          <td>${contact.last_name}</td>
+          <td>${contact.email}</td>
+        </tr>`
+      );
+    });
+  });
+  
+  $('#create-contact').on('click', function(event) {
+    event.preventDefault();
     var first_name = $('#first_name').val();
     var last_name = $('#last_name').val();
     var email = $('#email').val();
@@ -10,11 +22,7 @@ $(function() {
       email: email
     };
     $.post('/contact/new', data);
-  });
-
-
-  $('#contact-index').text(function() {
-    
+    $('#create-contact-form').trigger('reset');
   });
 
 });
