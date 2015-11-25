@@ -10,7 +10,7 @@ $(function() {
       );
     });
   });
-  
+
   $('#create-contact').on('click', function(event) {
     event.preventDefault();
     var first_name = $('#first_name').val();
@@ -21,8 +21,16 @@ $(function() {
       last_name: last_name,
       email: email
     };
-    $.post('/contact/new', data);
+
+    $('#contact').append(
+      "<tr> \
+        <td>" + first_name + "</td>  \
+        <td>"+ last_name + "</td>  \
+        <td>" + email + "</td>  \
+      </tr>"
+    );
+
+    $.post('/contacts', data);
     $('#create-contact-form').trigger('reset');
   });
-
 });

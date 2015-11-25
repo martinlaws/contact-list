@@ -8,7 +8,7 @@ get '/contacts' do
   @contacts.to_json
 end
 
-post '/contact/new' do
-  contact = Contact.new(params)
-  contact.save
+post '/contacts' do
+  @contact = Contact.new(params)
+  @contact.save
 end
