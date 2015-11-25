@@ -6,7 +6,6 @@ $(function() {
           <td>${contact.first_name}</td>
           <td>${contact.last_name}</td>
           <td>${contact.email}</td>
-          <td><a class='button'>Delete</a><td>
         </tr>`
       );
     });

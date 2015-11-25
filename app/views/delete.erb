@@ -1,11 +1,12 @@
 <h1>Which contact would you like to delete?</h1>
+
 <table>
   <thead>
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
-      <th>Delete?</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,9 @@
       <th><%= contact.email %></th>
       <th><a href="/contact/<%= contact.id %>/delete" class="button">Delete</a></th>
     </tr>
+    <% end %>
   </tbody>
 
 </table>
+
+<a class="button button-primary" style="float: center;" href="/">Home</a>

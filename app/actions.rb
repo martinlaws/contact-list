@@ -21,4 +21,5 @@ end
 get '/contact/:id/delete' do
   contact = Contact.find(params[:id])
   contact.destroy
+  redirect '/contacts/delete'
 end
