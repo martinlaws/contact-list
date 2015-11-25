@@ -12,6 +12,9 @@ $(function() {
     $.post('/contact/new', data);
   });
 
-  
+
+  $('#contact-index').text(function() {
+    
+  });
 
 });
