@@ -1,4 +1,3 @@
-# A sample Gemfile
 source "https://rubygems.org"
 
 gem 'rake'
@@ -10,6 +9,7 @@ gem 'sinatra-activerecord'
 
 gem 'puma'
 gem 'tux'
+gem "sinatra-cross_origin", "~> 0.3.1"
 
 group :development, :test do
   gem 'pry'
